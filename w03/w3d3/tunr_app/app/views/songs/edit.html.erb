@@ -1,0 +1,27 @@
+<h1>Songs#edit</h1>
+<p>Find me in app/views/songs/edit.html.erb</p>
+<h1>Songs#new</h1>
+
+<%= form_for @song do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  <div class="field">
+    <%= f.label :album %><br />
+    <% Album.all.each do |album| %>
+      <%# binding.pry %>
+      <%= check_box_tag "song[album_ids][]", album.id, @song.album_ids.include?(album.id) %>
+      <%= album.name %><br />
+
+      <%#= label_tag("song_genre_id", album.name) %>
+      <%#= radio_button_tag("song[genre_id]", album.id) %>
+
+    <% end %>
+  </div>
+
+
+  <%= f.submit 'Add song!' %>
+
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Recipes#new</h1>
+<p>Find me in app/views/recipes/new.html.erb</p>
+
+<%= form_for(@recipe) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :recipe_image %>
+  <%= f.file_field :recipe_image %>
+
+  <%= f.label :remote_recipe_image_url, "or use an image URL" %>
+  <%= f.text_field :remote_recipe_image_url %>
+
+  <%= f.submit "Submit" %>
+<% end %>

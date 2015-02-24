@@ -1,0 +1,24 @@
+<h1>This is my Home Page</h1>
+
+<% @mta.each do |line, stops| %>
+	<li><%= line %>: <%= stops.join(', ') %></li>
+<% end -%>
+
+<h2>Enter your journey:</h2>
+
+<form action='/' method='get'>
+  <label>Starting Train</label>
+  <input name='start_train'></input>
+  <label>Starting stop</label>
+  <input name='start_stop'></input>
+  <label>Ending Train</label>
+  <input name='end_train'></input>
+	<label>Ending Train</label>
+  <input name='end_stop'></input>
+
+  <input type='submit'></input>
+</form>
+
+<% if @total_length_of_trip %>
+  <h4>Your trip length is: <%= @total_length_of_trip %> stops :)</h4>
+<% end -%>

@@ -1,0 +1,40 @@
+<h1>Mortgage</h1>
+
+<form action="/mortgage" method="get">
+	<label for="principal">principal</label>
+	<input type="text" name="principal">
+	<label for="interest">interest</label>
+	<input type="text" name="interest">
+	<label for="months">months</label>
+
+	fixed:<input type="radio" name='operator' value="fixed">
+	variable:<input type="radio" name='operator' value="variable">
+
+	<input type='text' name='months'>
+	<input type='submit'>
+</form>
+
+
+<% if @result %>
+	<h1> your result is £<%= @result %> </h1>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

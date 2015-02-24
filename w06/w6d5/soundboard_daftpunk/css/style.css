@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+#keyboard {
+  width: 800px;
+  height: 200px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.key {
+  width: 12.5%;
+  height: 50%;
+  /*display: inline-block;*/
+  float: left;
+  border: 1px solid blue;
+  text-align: center;
+  line-height: 100px;
+}
+

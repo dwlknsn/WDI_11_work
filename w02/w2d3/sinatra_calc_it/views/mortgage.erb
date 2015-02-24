@@ -1,0 +1,22 @@
+<h1>Mortgage calc</h1>
+
+<form action="/mortgage" method="get">
+  <!-- principal -->
+  <label for="principal">£ Principal</label>
+  <input type="text" name="principal">
+  
+  <!-- yearly interest rate -->
+  <label for="interest">% yearly interest</label>
+  <input type="text" name="interest">
+  
+  <!-- months remaining -->
+  <label for="months">months remaining</label>
+  <input type="text" name="months">
+
+  <input type="submit">
+</form>
+
+<% if @result %>
+  <h1>Your monthly payment is £<%= @result %></h1>
+<% end %>
+

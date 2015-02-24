@@ -1,0 +1,10 @@
+<h1>Recipes#index</h1>
+<p>Find me in app/views/recipes/index.html.erb</p>
+
+<% if @recipes %>
+	<% @recipes.each do |recipe| %>
+		<p><%= recipe.name %></p>
+		<p><%= image_tag(recipe.recipe_image.thumb.url) %></p>
+		<p><%= image_tag(recipe.recipe_image.detail.url) %></p>
+	<% end %>
+<% end %>

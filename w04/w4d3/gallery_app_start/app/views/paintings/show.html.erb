@@ -1,0 +1,25 @@
+<h1>
+  <%= @painting.title %>
+</h1>
+<p>
+  <b>Artist:</b>
+  <%= @painting.artist %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @painting.description %>
+</p>
+<p>
+  <b>Price:</b>
+  <%= @painting.price %>
+</p>
+<p>
+  <b>Gallery:</b>
+  <%= @painting.gallery.name %>
+</p>
+<p>
+  <%= image_tag @painting.image %>
+</p>
+<%= link_to 'Edit', edit_painting_path(@painting) %>
+|
+<%= link_to "Back to Gallery", @painting.gallery %>

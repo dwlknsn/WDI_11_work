@@ -1,0 +1,18 @@
+<h2>BMI Calculator</h2>
+
+<form action="/bmi" method="get">  
+  Imperial (lbs / in): <input type="radio" name="operator" value="imperial">
+  Metric (kg / m): <input type="radio" name="operator" value="metric">
+
+  <label for="mass">Mass</label>
+  <input type="text" name="mass">
+  <label for="height">Height</label>
+  <input type="text" name="height">
+
+
+  <input type="submit">
+</form>
+
+<% if @result %>
+  <h2>Your BMI is <%= @result %></h2>
+<% end %>

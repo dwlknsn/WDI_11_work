@@ -1,0 +1,9 @@
+<h1>Recipes#index</h1>
+<h2>Hello</h2>
+<% if @recipes %>
+	<% @recipes.each do |recipe| %>
+		<p><%= recipe.name %></p>
+		<p><%= image_tag(recipe.recipe_image.thumb.url) %></p>
+		<p><%= image_tag(recipe.recipe_image.detail.url) %></p>
+	<% end %>
+<% end %>
